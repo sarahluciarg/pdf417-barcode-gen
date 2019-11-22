@@ -75,7 +75,7 @@ function getRndDate() {
   year = new Date().getFullYear()
   year = year - 1;
   date = date + year.toString(10);;
-  return date;
+  issueDate = date;
 }
 function getRndExpiryDate(years) {
   date = "";
@@ -130,6 +130,10 @@ function go() {
   var formattedlastName = lastName.toUpperCase();
   var formattedmiddleName = middleName.toUpperCase();
   var formattedfirstName = firstName.toUpperCase();
+
+  var issueDate = document.getElementsByName("issuedate")[0].value;
+    
+  
 
   var birthday = document.getElementsByName("bday")[0].value;
 
@@ -623,6 +627,14 @@ function go() {
   <br>
   <input type="radio" name="gender" value="1" checked> Male
   <input type="radio" name="gender" value="2"> Female
+  <br>
+<br>
+  Issue Date:
+  <br>
+<input type="date" id="issuedate" name="issuedate"></input>
+<!--
+<button onclick="getRndDate()">Random</button>
+-->
   <br>
   <br>
   Eye Color:
