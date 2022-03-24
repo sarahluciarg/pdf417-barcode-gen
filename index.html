@@ -123,19 +123,18 @@ function go() {
   var revDate = "11272016";
   var stateID = document.getElementById('states');
 
-  var lastName = document.getElementsByName("lastName")[0].value;
-  var middleName = document.getElementsByName("middleName")[0].value;
-  var firstName = document.getElementsByName("firstName")[0].value;
+  var lastName = document.getElementsByName("Rodriguez")[0].value;
+  var firstName = document.getElementsByName("Sarah")[0].value;
 
   var formattedlastName = lastName.toUpperCase();
   var formattedmiddleName = middleName.toUpperCase();
   var formattedfirstName = firstName.toUpperCase();
 
-  var issueDate = document.getElementsByName("issuedate")[0].value;
+  var issueDate = document.getElementsByName("30OCT2020")[0].value;
     
   
 
-  var birthday = document.getElementsByName("bday")[0].value;
+  var birthday = document.getElementsByName("28OCT2000")[0].value;
 
   var birthYear = birthday.substring(0,4);
   var birthMonth = birthday.substring(5,7);
@@ -143,12 +142,12 @@ function go() {
 
   var formattedBirthday = birthMonth + birthDate + birthYear;
 
-  var inches = document.getElementsByName("heightIn")[0].value;
-  var feet = document.getElementsByName("heightFT")[0].value;
+  var inches = document.getElementsByName("6")[0].value;
+  var feet = document.getElementsByName("5")[0].value;
   var height = (Number(feet) * 12) + Number(inches);
   var formattedHeight = "0" + height.toString(10) + " in";
 
-  var weight = document.getElementsByName("weight")[0].value;
+  var weight = document.getElementsByName("125")[0].value;
   if (Number(weight) <= 99) {
     var weight = "0" + weight;
   }
@@ -160,29 +159,29 @@ function go() {
     genderFormated = "2";
   }
 
-  var hairColor = document.getElementById('hairColor').value;
-  var eyeColor = document.getElementById('eyeColor').value;
+  var hairColor = document.getElementById('BRO').value;
+  var eyeColor = document.getElementById('BRO').value;
 
-  var street = document.getElementsByName("street")[0].value;
+  var street = document.getElementsByName("Cll M CANDELARIA")[0].value;
   var formattedStreet = street.toUpperCase();
-  var city = document.getElementsByName("city")[0].value;
+  var city = document.getElementsByName("MAYAGÜEZ")[0].value;
   var formattedCity = city.toUpperCase();
-  var zip = document.getElementsByName("zip")[0].value;
+  var zip = document.getElementsByName("00682")[0].value;
   var formattedZip = zip + getRndInteger(1000, 9999) + "  ";
 
-  if (stateID.value == 'AL') {
+  if (stateID.value == 'PR') {
     var iin = "636033";
     var lin = getRndInteger(1000000, 9999999);
     var expiryDate = getRndExpiryDate(4);
     var classification = "D";
 
-  }else if (stateID.value == 'AK') {
+  }else if (stateID.value == 'PR') {
     var iin = "636059";
     var lin = getRndInteger(1000000, 9999999);
     var expiryDate = getRndExpiryDate(5);
     var classification = "D";
 
-  }else if (stateID.value == 'AZ') {
+  }else if (stateID.value == 'PR') {
     var iin = "636026";
     const list = "ABDY";
     var res = "";
@@ -192,25 +191,25 @@ function go() {
     var expiryDate = getRndExpiryDate(12);
     var classification = "D";
 
-  }else if (stateID.value == 'AR') {
+  }else if (stateID.value == 'PR') {
     var iin = "636021";
     var lin = "9" + getRndInteger(10000000, 99999999);
     var expiryDate = getRndExpiryDate(8);
     var classification = "D";
 
-  }else if (stateID.value == 'CA') {
+  }else if (stateID.value == 'PR') {
     var iin = "636014";
     var lin = getRndLetter() + getRndInteger(1000000, 9999999);
     var expiryDate = getRndExpiryDate(5);
     var classification = "C";
 
-  }else if (stateID.value == 'CO') {
+  }else if (stateID.value == 'PR') {
     var iin = "636020";
     var lin = getRndInteger(10, 99) + "-" + getRndInteger(100, 999) + "-" + getRndInteger(1000, 9999);
     var expiryDate = getRndExpiryDate(5);
     var classification = "R";
 
-  }else if (stateID.value == 'CT') {
+  }else if (stateID.value == 'PR') {
     var iin = "636006";
     if ((birthYear % 2) == 0) {
       var lin = birthMonth + getRndInteger(1000000, 9999999);
@@ -220,279 +219,6 @@ function go() {
     }
     var expiryDate = getRndExpiryDate(6);
     var classification = "D";
-
-  }else if (stateID.value == 'DE') {
-    var iin = "636011";
-    var lin = getRndInteger(1000000, 9999999);
-    var expiryDate = getRndExpiryDate(8);
-    var classification = "D";
-
-  }else if (stateID.value == 'FL') {
-    var iin = "636010";
-    var lin = lastName.substring(0,1) + getRndInteger(100, 999) + "-" + getRndInteger(100, 999) + birthYear.substring(2,5) + "-" + getRndInteger(100, 999) + "-" + Math.floor(Math.random() * 2).toString(10);
-    var expiryDate = getRndExpiryDate(8);
-    var classification = "E";
-
-  }else if (stateID.value == 'GA') {
-    var iin = "636055";
-    var lin = getRndInteger(100000000, 999999999);
-    var expiryDate = getRndExpiryDate(8);
-    var classification = "C";
-
-  }else if (stateID.value == 'HI') {
-    var iin = "636047";
-    var lin = "H" + getRndInteger(10000000, 99999999);
-    var expiryDate = getRndExpiryDate(8);
-    var classification = "3";
-
-  }else if (stateID.value == 'ID') {
-    var iin = "636050";
-    var lin = getRndLetter() + getRndLetter() + getRndInteger(100000, 999999) + getRndLetter();
-    var expiryDate = getRndExpiryDate(8);
-    var classification = "D";
-
-  }else if (stateID.value == 'IL') {
-    var iin = "636035";
-    var lin = lastName.substring(0,1) + getRndInteger(10000000000, 99999999999);
-    var expiryDate = getRndExpiryDate(4);
-    var classification = "D";
-
-  }else if (stateID.value == 'IN') {
-    var iin = "636037";
-    var lin = getRndInteger(1000, 9999) + "-" + getRndInteger(10, 99) + "-" + getRndInteger(1000, 9999);
-    var expiryDate = getRndExpiryDate(6);
-    var classification = "D";
-
-  }else if (stateID.value == 'IA') {
-    var iin = "636018";
-    var lin = getRndInteger(100000000, 999999999);
-    var expiryDate = getRndExpiryDate(8);
-    var classification = "C";
-
-  }else if (stateID.value == 'KS') {
-    var iin = "636022";
-    var lin = "K" + getRndInteger(10, 99) + "-" + getRndInteger(10, 99) + "-" + getRndInteger(1000, 9999);
-    var expiryDate = getRndExpiryDate(6);
-    var classification = "C";
-
-  }else if (stateID.value == 'KY') {
-    var iin = "636046";
-    var lin = lastName.substring(0,1) + "-" + getRndInteger(100, 999) + "-" + getRndInteger(100, 999);
-    var expiryDate = getRndExpiryDate(8);
-    var classification = "D";
-
-  }else if (stateID.value == 'LA') {
-    var iin = "636007";
-    var lin = "00" + getRndInteger(1000000, 9999999);
-    var expiryDate = getRndExpiryDate(6);
-    var classification = "E";
-
-  }else if (stateID.value == 'ME') {
-    var iin = "636041";
-    var lin = getRndInteger(1000000, 9999999);
-    var expiryDate = getRndExpiryDate(6);
-    var classification = "C";
-
-  }else if (stateID.value == 'MD') {
-    var iin = "636003";
-    var lin = lastName.substring(0,1) + "-" + getRndInteger(100, 999) + "-" + getRndInteger(100, 999) + "-" + getRndInteger(100, 999) + "-" + getRndInteger(100, 999);
-    var expiryDate = getRndExpiryDate(8);
-    var classification = "C";
-
-  }else if (stateID.value == 'MA') {
-    var iin = "636002";
-    var lin = "S" + getRndInteger(10000000, 99999999);
-    var expiryDate = getRndExpiryDate(5);
-    var classification = "D";
-
-  }else if (stateID.value == 'MI') {
-    var iin = "636032";
-    var lin = lastName.substring(0,1) + " " + getRndInteger(100, 999) + " " + getRndInteger(100, 999) + " " + getRndInteger(100, 999) + " " + getRndInteger(100, 999);
-    var expiryDate = getRndExpiryDate(4);
-    var classification = "D";
-
-  }else if (stateID.value == 'MN') {
-    var iin = "636038";
-    var lin = getRndLetter() + getRndInteger(100000000000, 999999999999);
-    var expiryDate = getRndExpiryDate(4);
-    var classification = "D";
-
-  }else if (stateID.value == 'MS') {
-    var iin = "636051";
-    var lin = getRndInteger(100000000, 999999999);
-    var expiryDate = getRndExpiryDate(8);
-    var classification = "R";
-
-  }else if (stateID.value == 'MO') {
-    var iin = "636030";
-    var lin = getRndLetter() + getRndInteger(100000000, 999999999);
-    var expiryDate = getRndExpiryDate(6);
-    var classification = "F";
-
-  }else if (stateID.value == 'MT') {
-    var iin = "636008";
-    var lin = birthMonth + getRndInteger(100, 999) + birthYear + "41" + birthDate;
-    var expiryDate = getRndExpiryDate(8);
-    var classification = "D";
-
-  }else if (stateID.value == 'NE') {
-    var iin = "636054";
-    const list = "ABCEGHV";
-    var res = "";
-    var rnd = Math.floor(Math.random() * list.length);
-    res = list.charAt(rnd);
-    var lin = res + getRndInteger(10000000, 99999999);
-    var expiryDate = getRndExpiryDate(5);
-    var classification = "O";
-
-  }else if (stateID.value == 'NV') {
-    var iin = "636049";
-    var lin = getRndInteger(1000000000, 9999999999);
-    var expiryDate = getRndExpiryDate(8);
-    var classification = "C";
-
-  }else if (stateID.value == 'NH') {
-    var iin = "636039";
-    var lnamelength = lastName.length;
-    var lin = lastName.substring(0,1) + lastName.substring((Number(lnamelength) - 1),Number(lnamelength))  + firstName.substring(0,1) + birthYear.substring(2,5) + birthDate + getRndInteger(1000,9999);
-    var expiryDate = getRndExpiryDate(5);
-    var classification = "D";
-
-  }else if (stateID.value == 'NJ') {
-    var iin = "636036";
-    var lin = getRndLetter() + getRndInteger(1000, 9999) + " " + getRndInteger(10000, 99999) + " " + getRndInteger(10000, 99999);
-    var expiryDate = getRndExpiryDate(4);
-    var classification = "D";
-
-  }else if (stateID.value == 'NM') {
-    var iin = "636009";
-    var lin = getRndInteger(100000000, 999999999);
-    var expiryDate = getRndExpiryDate(8);
-    var classification = "D";
-
-  }else if (stateID.value == 'NY') {
-    var iin = "636001";
-    var lin = getRndInteger(100, 999) + " " + getRndInteger(100, 999) + " " + getRndInteger(100, 999);
-    var expiryDate = getRndExpiryDate(8);
-    var classification = "D";
-
-  }else if (stateID.value == 'NC') {
-    var iin = "636004";
-    var lin = getRndInteger(100000000000, 999999999999);
-    var expiryDate = getRndExpiryDate(8);
-    var classification = "A";
-
-  }else if (stateID.value == 'ND') {
-    var iin = "636034";
-      var lin = getRndLetter() + getRndLetter() + getRndLetter() + "-" + getRndInteger(10,99) + "-" + getRndInteger(1000,9999);
-      var expiryDate = getRndExpiryDate(6);
-      var classification = "D";
-
-  }else if (stateID.value == 'OH') {
-    var iin = "636023";
-    var lin = getRndLetter() + getRndLetter() + getRndInteger(100000000,999999999);
-    var expiryDate = getRndExpiryDate(4);
-    var classification = "D";
-
-  }else if (stateID.value == 'OK') {
-    var iin = "636058";
-    var lin = getRndLetter() + getRndInteger(100000000,999999999);
-    var expiryDate = getRndExpiryDate(4);
-    var classification = "D";
-
-  }else if (stateID.value == 'OR') {
-    var iin = "636029";
-    var lin = getRndInteger(1000000,9999999);
-    var expiryDate = getRndExpiryDate(8);
-    var classification = "C";
-
-  }else if (stateID.value == 'PA') {
-    var iin = "636025";
-    var lin = getRndInteger(10,99) + " " + getRndInteger(100,999) + " " + getRndInteger(100,999);
-    var expiryDate = getRndExpiryDate(4);
-    var classification = "C";
-
-  }else if (stateID.value == 'RI') {
-    var iin = "636052";
-    var lin = getRndInteger(1000000,9999999);
-    var expiryDate = getRndExpiryDate(5);
-    var classification = "O";
-
-  }else if (stateID.value == 'SC') {
-    var iin = "636005";
-    var lin = getRndInteger(10000000000,99999999999);
-    var expiryDate = getRndExpiryDate(8);
-    var classification = "D";
-
-  }else if (stateID.value == 'SD') {
-    var iin = "636042";
-    var lin = getRndInteger(10000000,99999999);
-    var expiryDate = getRndExpiryDate(5);
-    var classification = "1";
-
-  }else if (stateID.value == 'TN') {
-    var iin = "636053";
-    var lin = getRndInteger(100000000,999999999);
-    var expiryDate = getRndExpiryDate(8);
-    var classification = "D";
-
-  }else if (stateID.value == 'TX') {
-    var iin = "636015";
-    var lin = getRndInteger(10000000,99999999);
-    var expiryDate = getRndExpiryDate(6);
-    var classification = "C";
-
-  }else if (stateID.value == 'UT') {
-    var iin = "636040";
-    var lin = getRndInteger(1000000000,9999999999);
-    var expiryDate = getRndExpiryDate(8);
-    var classification = "D";
-
-  }else if (stateID.value == 'VT') {
-    var iin = "636024";
-    var VernmontIn = Math.floor(Math.random() * 2);
-    if(VermontIn == 0){
-      var lin = getRndInteger(10000000,99999999);
-    } else {
-      var lin = getRndInteger(1000000,9999999) +getRndLetter();
-    }
-    var expiryDate = getRndExpiryDate(4);
-    var classification = "1";
-
-  }else if (stateID.value == 'VA') {
-    var iin = "636000";
-    var lin = getRndLetter() + getRndInteger(10,99) + "-" + getRndInteger(10,99) + "-" +getRndInteger(1000,9999);
-    var expiryDate = getRndExpiryDate(8);
-    var classification = "D";
-
-  }else if (stateID.value == 'WA') {
-    var iin = "636045";
-    var lin = fit(lastName,5) + firstName.substring(0,1) + middleName.substring(0,1) + getRndInteger(10000,99999);
-    var expiryDate = getRndExpiryDate(6);
-    var classification = "D";
-
-  }else if (stateID.value == 'WV') {
-    var iin = "636061";
-    var WestVirginiaIn = Math.floor(Math.random() * 2);
-    if(WestVirginiaIn == 0){
-      var lin = getRndLetter() + getRndInteger(100000,999999);
-    } else {
-      var lin = getRndLetter() + getRndLetter() + getRndInteger(10000,99999);
-    }
-    var expiryDate = getRndExpiryDate(8);
-    var classification = "E";
-
-  }else if (stateID.value == 'WI') {
-    var iin = "636031";
-    var lin = getRndLetter() + getRndInteger(100,999) + "-" + getRndInteger(1000,9999) + getRndInteger(1000,9999) + getRndInteger(10,99);
-    var expiryDate = getRndExpiryDate(8);
-    var classification = "D";
-
-  }else if (stateID.value == 'WY') {
-    var iin = "636060";
-    var lin = getRndInteger(100000,999999) + "-" + getRndInteger(100,999);
-    var expiryDate = getRndExpiryDate(5);
-    var classification = "C";
 
   }
 
@@ -529,10 +255,10 @@ function go() {
       y += bh;
   }
 
-  document.getElementById("licenseNumber").innerHTML = "License Number: " + lin;
-  document.getElementById("issueDate").innerHTML = "Issue Date (MMDDYYYY): " + issueDate;
-  document.getElementById("expiryDate").innerHTML = "Expiry date (MMDDYYYY): " + expiryDate;
-  document.getElementById("classification").innerHTML = "License Class: " + classification;
+  document.getElementById("001406701").innerHTML = "License Number: " + lin;
+  document.getElementById("30/10/2020").innerHTML = "Issue Date (MMDDYYYY): " + issueDate;
+  document.getElementById("28/10/202").innerHTML = "Expiry date (MMDDYYYY): " + expiryDate;
+  document.getElementById("3").innerHTML = "License Class: " + classification;
 }
 </script>
 <style>
